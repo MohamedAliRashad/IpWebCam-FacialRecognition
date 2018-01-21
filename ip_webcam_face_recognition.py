@@ -6,25 +6,29 @@ import argparse
 import face_recognition
 import time 
 
+# Some Argments For The project to be cooler :)
 parser = argparse.ArgumentParser()
 parser.add_argument('-i', '--ip', help = "ip address of the ip webcam app", required=True)
-parser.add_argument('-p', '--path', help = "path to the training images", required=True)
+parser.add_argument('-p', '--path', help = "path to the training images", default="Training_images")
 args = parser.parse_args()
 
-# The url to the javascript web page
+
+# The URL to the javascript web page
 url = "http://" + args.ip + "/shot.jpg"
 
+# Declaring some variables
 known_faces = []
 known_names = []
 
-# Looping over images in the training image path and extracting info from them
+
+# Looping over the images in the training image path and extracting information from them
 for image in os.listdir(args.path):
 	image_loaded = face_recognition.load_image_file(args.path + '/' + image)
 	face_encoding = face_recognition.face_encodings(image_loaded)[0]
 	known_faces.append(face_encoding)
 	known_names.append(image.split('.')[0])
 
-# Declaring some variables
+# Declaring some other variables
 face_locations = []
 face_encodings = []
 face_names = []
@@ -50,7 +54,9 @@ while True:
 	# Convert the image from BGR to RGB
 	rgb_small_frame = small_frame[:, :, ::-1]
 
+	# For a clean list
 	face_names = []
+
 	# Only process every other image in the video to save time
 	if process_this_image:
 		
