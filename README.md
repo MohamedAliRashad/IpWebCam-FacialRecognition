@@ -4,7 +4,7 @@ Script For Demonstrating the Beauty and Simplicity OF Facial Recognition API Usi
 ## Getting Started
 In this script i used the **Facial Recognition API** with IP Webcam App on Android to make a wireless face detector system and the best part is that all the processing happens on my computer for a faster FPS.
 
-### Dependinces
+## Dependinces
 We will need some libraries installed to start:
 
 ````
@@ -13,7 +13,7 @@ openCV
 numpy
 face_recognition
 ````
-### Installing
+## Installing
 
 i will walk with you step by step lines for installing the above libraries:
 
@@ -34,7 +34,7 @@ chmod +x install-opencv.sh
 ```
 **it will take some time so be patient**
 
-### Testing
+## Testing
 All you need now is to run the python script and see the magic happens, but first you will need to install the ip WebCam app on your android phone and start it to acquire the ip address and port number (usually: 8080) of the transmission and then you just need to type this on your command line:
 
 ```
@@ -49,7 +49,7 @@ Example:
 
 and you should see what your phone sees and identify the photos of sisi & mubark .... wait WHAT?!
 
-### How It Works ?
+## How It Works ?
 
 Now the script dose 3 things exactly:
 
@@ -59,7 +59,7 @@ Now the script dose 3 things exactly:
 
 Simple right :)
 
-### How to use it ?
+## How to use it ?
 
 Now, this should be simple as i demonstrated above with the code but there is some stuff i want to add here
 
@@ -67,7 +67,7 @@ Now, this should be simple as i demonstrated above with the code but there is so
 2. you can train the script on your images by putting a clear photo of you in the training_images folder with your name on it
 3. you can even access your phone from another country via the internet using something called **PortForwarding** 
 
-### What's Next ?
+## What's Next ?
 I will try to make this script work on normal Ip Cameras as well so you can do all of this with one line of code :)
 
 ***The Real Hero behind this script [Facial Recognition API](https://github.com/ageitgey/face_recognition)***
