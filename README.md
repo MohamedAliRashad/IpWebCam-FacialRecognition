@@ -2,7 +2,7 @@
 Script For Demonstrating the Beauty and Simplicity OF Facial Recognition API Using Ip WebCam App
 
 ## Getting Started
-In this script i used the **Facial Recognition API** with **IP Webcam** App for Android to achieve **Real Time Wireless Face Detection**.
+Here, I use the **Facial Recognition** API with **IP Webcam** App for Android to achieve **Real Time Wireless Face Detection**.
 
 ## Dependinces
 We will need some libraries installed to start:
