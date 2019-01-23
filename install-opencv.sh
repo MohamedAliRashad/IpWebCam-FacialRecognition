@@ -6,7 +6,8 @@
 # |----------------------------------------------------|
 # | OS             | OpenCV       | Test | Last test   |
 # |----------------|--------------|------|-------------|
-# | ubuntu 16.04.3 | opencv 3.4.0 | ok   | 6  jan 2018 |
+# | ubuntu 18.04.1 | OpenCV 4.0.1 | Ok   | 32 Jan 2019 |
+# | ubuntu 16.04.3 | OpenCV 3.4.0 | Ok   | 6  Jan 2018 |
 # | Ubuntu 16.04.2 | OpenCV 3.2.0 | OK   | 20 May 2017 |
 # | Debian 8.8     | OpenCV 3.2.0 | OK   | 20 May 2017 |
 # | Debian 9.0     | OpenCV 3.2.0 | OK   | 25 Jun 2017 |
@@ -46,13 +47,13 @@ sudo apt-get install -y ant default-jdk
 sudo apt-get install -y doxygen
 
 
-# 3. INSTALL THE LIBRARY (YOU CAN CHANGE '3.4.0' FOR THE LAST STABLE VERSION)
+# 3. INSTALL THE LIBRARY (YOU CAN CHANGE '4.0.1' FOR THE LAST STABLE VERSION)
 
 sudo apt-get install -y unzip wget
-wget https://github.com/opencv/opencv/archive/3.4.0.zip
-unzip 3.4.0.zip
-rm 3.4.0.zip
-mv opencv-3.4.0 OpenCV
+wget https://github.com/opencv/opencv/archive/4.0.1.zip
+unzip 4.0.1.zip
+rm 4.0.1.zip
+mv opencv-4.0.1 OpenCV
 cd OpenCV
 mkdir build
 cd build
