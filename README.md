@@ -8,7 +8,6 @@ Here, I use the **Facial Recognition** API with **IP Webcam** App for Android to
 We will need some libraries installed to start:
 
 ````
-requests
 openCV
 numpy
 face_recognition
@@ -19,9 +18,11 @@ i will walk with you step by step lines for installing the above libraries:
 
 **For Installing requests & numpy & face_recognition**
 ```
-sudo pip3 install numpy requests face_recognition
+pip3 install numpy face_recognition --user
 ```
-**For installing the latest openCV version, we will need to type this commands:**
+
+For installing the latest openCV version, we will need to type this commands:
+
 ```
 git clone https://github.com/MohamedAliRashad/IpWebCam-FacialRecognition.git
 
@@ -32,7 +33,13 @@ chmod +x install-opencv.sh
 ./install-opencv.sh
 
 ```
+
 **it will take some time so be patient**
+
+or you can just install it using pip **remove contrib if you want the main module only**
+```
+pip3 install opencv-contrib-python
+```
 
 ## Testing
 All you need now is to run the python script and see the magic happens, but first you will need to install the ip WebCam app on your android phone and start it to acquire the ip address and port number (usually: 8080) of the transmission and then you just need to type this on your command line:
