@@ -8,7 +8,7 @@ import time
 
 # Some Argments For The project to be cooler :)
 parser = argparse.ArgumentParser()
-parser.add_argument('-i', '--ip', help = "ip address of the ip webcam app", required=True)
+parser.add_argument('ip', help = "ip address of the ip webcam app")
 parser.add_argument('-p', '--path', help = "path to the training images", default="Training_images")
 args = parser.parse_args()
 
