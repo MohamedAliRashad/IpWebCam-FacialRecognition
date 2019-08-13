@@ -1,4 +1,3 @@
-import requests
 import cv2
 import numpy as np
 import os
@@ -14,7 +13,7 @@ args = parser.parse_args()
 
 
 # The URL to the javascript web page
-url = "http://" + args.ip + "/shot.jpg"
+url = "http://" + args.ip + "/video"
 
 # Declaring some variables
 known_faces = []
@@ -37,17 +36,14 @@ process_this_image = True
 start_time = time.time()
 counter = 0
 
+# The Fastest way i found
+cap = cv2.VideoCapture(url)
+
 while True:
-
-	# Getting the content of the page
-	page = requests.get(url)
-
-	# Turning the page content to a numpy array
-	imgN = np.array(bytearray(page.content), dtype=np.uint8)
-
-	# Decoding the image
-	frame = cv2.imdecode(imgN, -1)
- 
+	
+	# Read From Video object directly
+	ret, frame = cap.read()
+	
 	# Resizing the frame to 1/4 the size for a faster recognition
 	small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
 
